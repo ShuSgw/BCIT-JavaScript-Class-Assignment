@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="assets/js/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/footerFixed.js"></script> 
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<title>Shuhei Shagawa</title>
+</head>
+
+<body>
+	<!-- header -->
+	<header>
+		<i class="fa fa-bars"></i>
+		<div class="nav">
+			<ul>
+				<li><a href="index.html">JavaScript</a></li>
+				<li><a href="jquery.html">jQuery</a></li>
+				<li><a href="plugin.html">Plug-in</a></li>
+			</ul>
+		</div>
+			<h1>JavaScript Assignment</h1>
+			<h5>Javascript</h5>
+			<h4>A00975458</h4>
+			<h4>Shuhei Shagawa</h4>
+	</header>
+
+<!-- main -->
+	<section class="javascript">
+			<h2>Variables</h2>
+			<div class="container">
+				<p class = "description" >Variables are containers that can store data values, and you can use them whenever you need. However, we need to consider that there are different types and scopes. Also, variable can store another variable or themselves.</p>
+
+				<h3>Declaring Variable</h3>
+				<p class = "description" >The way to create a variable is a keyword “var”. (There are other keywords but I will explain later.)
+And you have to declare a name you like. However, double byte languages such as Japanese, spaces, comma, question mark, quotation, numbers as the first letter, and reserved words are not allowed.</p>
+
+				<button class = "btn" type="button">
+					Check Code
+				</button>
+
+				<div class = "code">
+					<pre class="prettyprint javascript">
+						<code>
+	&lt;script&gt;
+	   var name = 0;
+	   var name = "Hello";
+
+	   //they are not allowed to use↓
+	   var 日本語 = "Japanese";
+	   var ze ro = 0;
+	   var hello, world = "text";
+	   var "hello" = "hello";
+	   var 1hello = "text";
+	   var function = "text";
+	&lt;/script&gt;
+						</code>
+					</pre>
+				</div>
+				<!-- code end -->
+
+
+				<h3>Variable Types</h3>
+				<p class = "description" >There are three different types of variables. When you delete variables you should consider how you will use them.<br>
+				A variable with keyword:
+				<ul class = "listContent">
+					<li>var : The variable is readable and editable</li>
+					<li>const : The variable is readable only</li>
+					<li>let : The  variable is only work inside of a block</li>
+				</ul>
+				</p>
+				<button class = "btn" type="button">
+					Check Code
+				</button>
+				
+				<div class = "code">
+					<pre class="prettyprint htmlt">
+						<code>
+	&lt;script&gt;
+		const Csample = 0:
+		var Vsample = 0;
+
+		Csample = 1:
+		Vsample = 1;
+
+		console.log(Csample);//1
+		console.log(Vsample);//error
+
+		function f() {
+			  let x = 1;
+			  console.log(x);
+			  {
+			    let x = 2;
+			    console.log(x);
+			  }
+			  console.log(x);
+			}
+
+		f()
+		//1
+		//2
+		//1
+	&lt;/script&gt;
+						</code>
+					</pre>
+				</div>
+				<!-- code end -->
+
+				<h3>Scope</h3>
+				<p class = "description" >There are 3 different types of scope in Javascript depending on where variables are decread and how you access them.</p>
+				<h4>Global scope</h4>
+				<p class = "description" >When variables are declared outside of functions or blocks, these variables are global variables. Also, you can use global variable whenever you want.</p>
+				<h4>Local scope</h4>
+				<p class = "description" >When variables are declared inside of a function or as a parameter for the function, these variable are local variables. Also, you can only use local variables within the function. If you use these local variables declared within a function outside of the function, it occurs some errors.</p>
+				<h4>Block scope</h4>
+				<p class = "description" >When variables are declared within a code block, such as if or for statements with keyword “let”, these variable become brock variables.
+</p>
+
+				<button class = "btn" type="button">
+					Check Code
+				</button>
+				
+				<div class = "code">
+					<pre class="prettyprint htmlt">
+						<code>
+	&lt;script&gt;
+
+	//Global
+	var x = 1;
+	function(){
+		console.log(x);//1
+	}
+
+	//local
+	function(){
+		var x = 1;
+		console.log(x);//1
+	}
+
+	//block
+	function f() {
+		  let x = 1;
+		  console.log(x);
+		  {
+		    let x = 2;
+		    console.log(x);
+		  }
+		  console.log(x);
+		}
+	f()
+	//1
+	//2
+	//1
+
+	&lt;/script&gt;
+						</code>
+					</pre>
+				</div>
+				<!-- code end -->
+
+			</div>
+		</section>
+	<section class="javascript">
+			<h2>Function</h2>
+			<div class="container">
+				<p class = "description" >Set of statements for performing some tasks, such as calucration. You can name it whatever you want, but it only works when it is called.</p>
+
+				<h3>Function invocation</h3>
+				<p class = "description" >After you define a function, it is just a function, so you need to invoke with some actions or name you decide, which is function invocation.</p>
+
+				<button class = "btn" type="button">
+					Check Code
+				</button>
+
+				<div class = "code">
+					<pre class="prettyprint htmlt">
+						<code>
+	&lt;script&gt;
+	function(){
+		console.log("hello");
+	}
+
+	function();
+	//hello
+
+	&lt;/script&gt;
+						</code>
+					</pre>
+				</div>
+				<!-- code end -->
+				<h3>Function parameters</h3>
+				<p class = "description" >You can use a function you define many times, and pass some values to the function. Then, the function performs whatever you define, and has different values.</p>
+
+				<button class = "btn" type="button">
+					Check Code
+				</button>
+				
+				<div class = "code">
+					<pre class="prettyprint htmlt">
+						<code>
+	&lt;script&gt;
+	function hello(a){
+		console.log(a);
+	}
+
+	hello(1);
+	//1
+	hello(2);
+	//2
+	hello("hello");
+	//"hello"
+
+	&lt;/script&gt;
+						</code>
+					</pre>
+				</div>
+				<!-- code end -->
+			</div>
+		</section>
+			<section class="javascript">
+			<h2>Conditional Structures</h2>
+			<div class="container">
+				<p class = "description" >When you need to separate tasks depending on some situations, the conditional structures should be used.There are two ways to create conditional structures in Javascript.</p>
+
+				<h3>If/else</h3>
+				<p class = "description" >A condition you define is evaluated by “if” statement, and if a situation matches the condition, it executes a block you define. Also, you can create another different block from the true part. If the situation does not match the condition you define, “if else” statement executes another block as false. Moreover, you can add more conditions with “else if”.</p>
+
+				<button class = "btn" type="button">
+					Check Code
+				</button>
+
+				<div class = "code">
+					<pre class="prettyprint htmlt">
+						<code>
+	&lt;script&gt;
+		var sample = 1;
+
+		//if
+		if(sample > 0){
+			console.log("sampple is more than 0");
+		}
+
+		//if else
+		var score = 90;
+			if (score >= 80) {
+				document.write(“Pass!!”);
+			} else {
+				document.write(“Fail!!”);
+			}
+
+		//elase
+		var score = 90;
+			if (score >= 80) {
+				document.write(“Great”);
+			} else if (score >= 50) {
+				document.write(“Pass”);
+			} else{
+				document.write(Fail);
+			}
+	&lt;/script&gt;
+						</code>
+					</pre>
+				</div>
+				<!-- code end -->
+				<h3>Swich</h3>
+				<p class = "description" >When you have many conditions and bloks, you should use switch instead of using if statement. The value of the expression you define is compared with each case, then if the expression matches a case, the case’s block is executed.</p>
+				<h4>Break</h4>
+				<p class = "description" >“Break” keyword can stop after a case matches to the expression, so each case has to have the keyword at the end.</p>
+				<h4>Default</h4>
+				<p class = "description" >You can define a exception that each case does not match the expression you define
+to create “default”(case).</p>
+
+				<button class = "btn" type="button">
+					Check Code
+				</button>
+				
+				<div class = "code">
+					<pre class="prettyprint htmlt">
+						<code>
+	&lt;script&gt;
+		var weather = 'Sun';
+		 
+		 
+		switch( weather ) {
+
+				case default:
+				        console.log('Not sure yet');
+				        break;
+
+		    case 'Sun':
+		        console.log('It is sunny today');
+		        break;
+		 
+		 
+		    case 'Cloud':
+		        console.log('It is cloudy today');
+		        break;
+		 
+		 
+		    case 'Rain':
+		        console.log('It is rainy today');
+		        break;
+		}
+	&lt;/sript&gt;
+						</code>
+					</pre>
+				</div>
+				<!-- code end -->
+			</div>
+		</section>
+<div id = "footer">
+	<p>CopyRight©Shuhei Shagawa</p>
+</div>
+
+</body>
+</html>

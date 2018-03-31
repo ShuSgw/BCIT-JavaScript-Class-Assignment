@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="assets/js/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/footerFixed.js"></script> 
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<title>Shuhei Shagawa</title>
+</head>
+
+<body>
+	<!-- header -->
+	<header id = "jquery">
+		<i class="fa fa-bars"></i>
+		<div class="nav">
+			<ul>
+				<li><a href="index.html">JavaScript</a></li>
+				<li><a href="jquery.html">jQuery</a></li>
+				<li><a href="plugin.html">Plug-in</a></li>
+			</ul>
+		</div>
+			<h1>JavaScript Assignment</h1>
+			<h5>jQuery</h5>
+			<h4>A00975458</h4>
+			<h4>Shuhei Shagawa</h4>
+	</header>
+
+<!-- main -->
+	<section class="javascript">
+			<h2>Main Selectors</h2>
+			<div class="container">
+				<p class = "description" >jQuery has many selectors and you can control HTML elements with them. You do not need to type lots of syntax that Javascript needs to type. Also, actions such as event handlers, or effects stick to the selecter, such as $( "#box" ).css( "border", "3px solid red" );</p>
+				<h3>Selectors for ID and Class</h3>
+				<p class = "description" >Instead of "document.getElementById" or "document.getElementByClassName", you can get HTML simply with jQuery selectors.</p>
+				<button class = "btn" type="button">
+					Check Code
+				</button>
+				<div class = "code">
+					<pre class="prettyprint javascript">
+						<code>
+	&lt;html&gt;
+		&lt;body&gt;
+			&lt;div id = "idBox" &gt;&lt;/div&gt;
+			&lt;div id = "classBox" &gt;&lt;/div&gt;
+		&lt;/body&gt;
+	&lt;/html&gt;
+
+	&lt;script&gt;
+		$(document).ready(function() {
+			var $idBox = $( "#idBox" );
+			var $classBox = $(".classBox");
+		});
+
+	&lt;/script&gt;
+						</code>
+					</pre>
+				</div>
+				<!-- code end -->
+
+			</div>
+			<!-- container -->
+		</section>
+	<section class="javascript">
+			<h2>Get and Set actions</h2>
+			<div class="container">
+				<p class = "description" >hellohellohello</p>
+				<h3>attr() Method</h3>
+				<p class = "description" >hellohellohello</p>
+				<button class = "btn" type="button">
+					Check Code
+				</button>
+
+				<div class = "code">
+					<pre class="prettyprint htmlt">
+						<code>
+	&lt;html&gt;
+		&lt;body&gt;
+			&lt;a href="http://www.google.com"　google &gt;&lt;/a&gt;
+		&lt;/body&gt;
+	&lt;/html&gt;
+
+	&lt;script&gt;
+		$(document).ready(function() {
+			console.log($('a').attr("href")); //Google Link
+			console.log($('a').attr("href", "http://www.yahoo.com/"));//Yahoo Link
+		});
+
+	&lt;/script&gt;
+						</code>
+					</pre>
+				</div>
+				<!-- code end -->
+				<h3>text() Method</h3>
+				<p class = "description" >hellohellohello</p>
+				<button class = "btn" type="button">
+					Check Code
+				</button>
+
+				<div class = "code">
+					<pre class="prettyprint htmlt">
+						<code>
+	&lt;html&gt;
+		&lt;body&gt;
+			&lt;div&gt;hello&lt;/div&gt;
+		&lt;/body&gt;
+	&lt;/html&gt;
+
+	&lt;script&gt;
+		$(document).ready(function() {
+			console.log($('div').text()); //hello
+			console.log($('div').text("world"));//world
+		});
+
+	&lt;/script&gt;
+						</code>
+					</pre>
+				</div>
+				<!-- code end -->
+			</div>
+		</section>
+			<section class="javascript">
+			<h2>Effects and Actions</h2>
+			<div class="container">
+				<p class = "description" >When you need to separate tasks depending on some situations, the conditional structures should be used.There are two ways to create conditional structures in Javascript.</p>
+
+				<h3>animate() Method</h3>
+				<p class = "description" >A condition you define is evaluated by “if” statement, and if a situation matches the condition, it executes a block you define. Also, you can create another different block from the true part. If the situation does not match the condition you define, “if else” statement executes another block as false. Moreover, you can add more conditions with “else if”.</p>
+
+				<button class = "btn" type="button">
+					Check Code
+				</button>
+
+				<div class = "code">
+					<pre class="prettyprint htmlt">
+						<code>
+	&lt;script&gt;
+		
+	$("button").click(function(){
+		    $("div").animate({left: '250px'});
+		}); 
+
+	&lt;/script&gt;
+						</code>
+					</pre>
+				<button id = "samplebtn" type="button">
+					Try this code
+				</button>
+				<div id = "samplebox"></div>
+				</div>
+				<!-- code end -->
+				<h3>toggle() Method</h3>
+				<p class = "description" >A condition you define is evaluated by “if” statement, and if a situation matches the condition, it executes a block you define. Also, you can create another different block from the true part. If the situation does not match the condition you define, “if else” statement executes another block as false. Moreover, you can add more conditions with “else if”.</p>
+
+				<button class = "btn" type="button">
+					Check Code
+				</button>
+
+				<div class = "code">
+					<pre class="prettyprint htmlt">
+						<code>
+	&lt;script&gt;
+		  $('#samplebtn_02').click(function() {
+		    $('#sampleText').toggle("slow");
+		  });
+	&lt;/script&gt;
+						</code>
+					</pre>
+					<button id = "samplebtn_02" type="button">
+					Try this code
+				</button>
+				<div id = "sampleText">
+					<p>Sample text Sample Text</p>
+					<p>Sample text Sample Text</p>
+					<p>Sample text Sample Text</p>
+					<p>Sample text Sample Text</p>
+					<p>Sample text Sample Text</p>
+					<p>Sample text Sample Text</p>
+
+				</div>
+				</div>
+				</div>
+				<!-- code end -->
+			</div>
+		</section>
+<div id = "footer">
+	<p>CopyRight©Shuhei Shagawa</p>
+</div>
+
+</body>
+</html>

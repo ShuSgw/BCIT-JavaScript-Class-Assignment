@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="assets/js/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/footerFixed.js"></script> 
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+	<script type="text/javascript" src="assets/js/quietflow/quietflow.min.js"></script>
+  <script type="text/javascript" src="assets/js/quietflow/prism.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<title>Shuhei Shagawa</title>
+</head>
+
+<body>
+	<!-- header -->
+	<header id = "plugin">
+		<i class="fa fa-bars"></i>
+		<div class="nav">
+			<ul>
+				<li><a href="index.html">JavaScript</a></li>
+				<li><a href="jquery.html">jQuery</a></li>
+				<li><a href="plugin.html">Plug-in</a></li>
+			</ul>
+		</div>
+			<h1>JavaScript Assignment</h1>
+			<h5>Plug-in</h5>
+			<h4>A00975458</h4>
+			<h4>Shuhei Shagawa</h4>
+	</header>
+
+<!-- main -->
+	<section class="javascript">
+			<h2>quietflow.js</h2>
+			<h3><a href="https://github.com/paulkr/quietflow.js">GitHub</a></h3>
+			<div class="container">
+				<p class = "description" ><a href="https://github.com/paulkr/quietflow.js">Paul. K</a></p>
+
+				<h3>How I use</h3>
+				<button class = "btn" type="button">
+					Check Code
+				</button>
+
+				<div class = "code">
+					<pre class="prettyprint javascript">
+						<code>
+	&lt;script&gt;
+    var images = [
+      "squareFlash",
+      "vortex",
+      "bouncingBalls",
+      "shootingLines",
+      "simpleGradient",
+      "starfield",
+      "layeredTriangles",
+      "cornerSpikes",
+      "floatingBoxes"
+  ];
+
+  var randImg = images[Math.floor(Math.random() * images.length)];
+      $("#plugin").quietflow({
+        theme          : randImg,
+        specificColors : ["rgba(46, 204, 113, .5)", 
+                          "rgba(52, 152, 219, .5)", 
+                          "rgba(231, 76, 60, .5)", 
+                          "rgba(155, 89, 182, .5)", 
+                          "rgba(241, 196, 15, .5)"],
+        boxCount       : 500,
+        backgroundCol  : "black"
+      });
+	&lt;/script&gt;
+						</code>
+					</pre>
+				</div>
+				<!-- code end -->
+
+			</div>
+		</section>
+<div id = "footer">
+	<p>CopyRight©Shuhei Shagawa</p>
+</div>
+
+</body>
+</html>
